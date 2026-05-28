@@ -1,0 +1,125 @@
+#####################################################
+#####################################################
+##    Function for calling in gam object           ##
+##      and predicting with it                     ##
+##      J. McNamee   2/17/19                       ##
+#####################################################
+#####################################################
+args = commandArgs(trailingOnly=TRUE)
+
+#Switch argument is: 1 = mean prediction, 2 = observation sampled from uncertainty
+#library(mgcv)
+pred.land <- function(State, MinLen, Bag, SeasonLen, RHL, Year, switch) {
+
+  #profvis::profvis({
+    #
+  #load("C:/Z Drive stuff/ASMFC/TCs/Fluke Scup BCB info/Summer Flounder/2019/Fluke_MSE/gam_obj.RData")
+  #load("data/gam_obj.RData")
+  load("~/research/fluke/data/gam_obj.RData")
+  gam_obj <- mdl.gam
+  len = seq(10,30,0.5)
+  seas = 61 - (306-SeasonLen)
+###Dataframe
+  dat2 = data.frame(State = rep(State, length(len)), Year = as.factor(rep(Year, length(len))), Length = len, MinLen = rep(MinLen, length(len)), Bag = rep(Bag, length(len)), Wave = rep(3, length(len)), SeasonLen = rep(61, length(len)), RHL = rep(RHL, length(len)))
+  dat3 = data.frame(State = rep(State, length(len)), Year = as.factor(rep(Year, length(len))), Length = len, MinLen = rep(MinLen, length(len)), Bag = rep(Bag, length(len)), Wave = rep(4, length(len)), SeasonLen = rep(62, length(len)), RHL = rep(RHL, length(len)))
+  dat4 = data.frame(State = rep(State, length(len)), Year = as.factor(rep(Year, length(len))), Length = len, MinLen = rep(MinLen, length(len)), Bag = rep(Bag, length(len)), Wave = rep(5, length(len)), SeasonLen = rep(61, length(len)), RHL = rep(RHL, length(len)))
+  dat5 = data.frame(State = rep(State, length(len)), Year = as.factor(rep(Year, length(len))), Length = len, MinLen = rep(MinLen, length(len)), Bag = rep(Bag, length(len)), Wave = rep(6, length(len)), SeasonLen = rep(seas, length(len)), RHL = rep(RHL, length(len)))
+
+  dat.all = data.frame(rbind(dat2, dat3, dat4, dat5))   #add this if wave 2 added in to prediction: dat1,
+
+###Season conditional statements
+  if (seas<0) {
+    seas = 61-(seas*-1)
+    dat4 = data.frame(State = rep(State, length(len)), Year = as.factor(rep(Year, length(len))), Length = len, MinLen = rep(MinLen, length(len)), Bag = rep(Bag, length(len)), Wave = rep(5, length(len)), SeasonLen = rep(seas, length(len)), RHL = rep(RHL, length(len)))
+
+    dat.all = data.frame(rbind(dat2, dat3, dat4))   #add this if wave 2 added in to prediction: dat1,
+
+    }  #end of season length condition 1
+
+  if (SeasonLen>245) {
+    dat1 = data.frame(State = rep(State, length(len)), Year = as.factor(rep(Year, length(len))), Length = len, MinLen = rep(MinLen, length(len)), Bag = rep(Bag, length(len)), Wave = rep(2, length(len)), SeasonLen = rep(61, length(len)), RHL = rep(RHL, length(len)))
+
+    dat.all = data.frame(rbind(dat1, dat2, dat3, dat4, dat5))
+
+  }  #end of season length condition 2
+
+
+###Output
+
+  if (switch ==1) {
+
+    land = exp(mgcv::predict.gam(gam_obj, newdata = dat.all))
+    output = cbind(dat.all, land)
+    return(output)
+
+  }  #end of switch condition 1
+
+  if (switch ==2) {
+
+    ##Bayesian covariance matrix of the model coefficients
+    Vb <- mgcv::vcov.gam(gam_obj)
+
+    #Number of draws from posterior
+    N <- 1000
+
+    #Container
+    land = rep(0,length(dat.all[,1]))
+    output = cbind(dat.all, land)
+
+    #Now we calculate fhat(x)-f(x), which is evaluated at the reg specs in dat.all, by row
+    for (i in 1:length(dat.all[,1])) {
+      Cg <- mgcv::predict.gam(gam_obj, dat.all[i,], type = "lpmatrix")
+      #evaluates the basis function
+
+      ##N samps frm bias in mdl coeff, follows multivariate nrml dist w/ mean vec 0 and covar matrix Vb
+      sims <- mgcv::rmvn(10, mu = coef(gam_obj), V = Vb)
+      #sims <- mgcv::rmvn(N, mu = coef(gam_obj), V = Vb)
+
+      #computes the deviations between the fitted and true parameters
+      fits <- Cg %*% t(sims)
+
+      ##Randomly sample 1 point from fits
+      nrnd <- 1  #number of random samples
+      land.1 <- exp(sample(fits, nrnd))
+      output$land[i] = land.1
+
+    }  #end of for loop
+    return(output)
+
+  }  #end of switch condition 2
+#})
+
+}  #end of function
+
+
+#####################################################
+#     Test                                          #
+#####################################################
+
+# pred.land("NJ", 18, 3, 246, 3.77, 2017, 2)
+# profvis::profvis({x = pred.land("NJ", 18, 3, 246, 3.77, 2017, 2)
+# print(sum(x$land))
+# })
+
+#args(pred.land)
+#function (State, MinLen, Bag, SeasonLen, RHL, Year, switch)
+
+# State <- "NJ"
+# MinLen <- 18
+# Bag <- 3
+# SeasonLen <- 246
+# RHL <- 3.77
+# Year <- 2017
+# switch <- 2
+
+#vector gam
+#discard model, going to do a two model approach and a vector gam approach
+#call Gary about bsb assess
+print(args)
+x <- pred.land("NJ", as.numeric(args[1]), 3, 246, 3.77, 2017, 2)
+#write(sum(x),file="recland.out")
+print(sum(x$land))
+write(sum(x$land),file="recland.out")
+print("done!")
+
+

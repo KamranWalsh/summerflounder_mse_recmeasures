@@ -1,0 +1,153 @@
+ Sigma R values
+ 2019  2020
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2019  1 0.6400
+2020  1 0.6400
+ Recruitment deviations
+Reg    2019    2020
+  1  0.3200  0.0000
+ projection        2020        2021
+ Sigma R values
+ 2021  2022
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2021  1 0.6400
+2022  1 0.6400
+ Recruitment deviations
+Reg    2021    2022
+  1  0.8755 -0.3124
+ projection        2022        2023
+ Sigma R values
+ 2023  2024
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2023  1 0.6400
+2024  1 0.6400
+ Recruitment deviations
+Reg    2023    2024
+  1  1.5877 -0.7412
+ projection        2024        2025
+ Sigma R values
+ 2025  2026
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2025  1 0.6400
+2026  1 0.6400
+ Recruitment deviations
+Reg    2025    2026
+  1  0.0034  0.3021
+ projection        2026        2027
+ Sigma R values
+ 2027  2028
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2027  1 0.6400
+2028  1 0.6400
+ Recruitment deviations
+Reg    2027    2028
+  1 -0.1810  0.2873
+ projection        2028        2029
+ Sigma R values
+ 2029  2030
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2029  1 0.6400
+2030  1 0.6400
+ Recruitment deviations
+Reg    2029    2030
+  1  0.2891  0.7911
+ projection        2030        2031
+ Sigma R values
+ 2031  2032
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2031  1 0.6400
+2032  1 0.6400
+ Recruitment deviations
+Reg    2031    2032
+  1 -0.6443 -0.3709
+ projection        2032        2033
+ Sigma R values
+ 2033  2034
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2033  1 0.6400
+2034  1 0.6400
+ Recruitment deviations
+Reg    2033    2034
+  1 -0.6180 -0.1421
+ projection        2034        2035
+ Sigma R values
+ 2035  2036
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2035  1 0.6400
+2036  1 0.6400
+ Recruitment deviations
+Reg    2035    2036
+  1  1.1889  0.6612
+ projection        2036        2037
+ Sigma R values
+ 2037  2038
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2037  1 0.6400
+2038  1 0.6400
+ Recruitment deviations
+Reg    2037    2038
+  1 -0.5875 -0.2654
+ projection        2038        2039
+ Sigma R values
+ 2039  2040
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2039  1 0.6400
+2040  1 0.6400
+ Recruitment deviations
+Reg    2039    2040
+  1  0.2329  0.4482
+ projection        2040        2041
+ Sigma R values
+ 2041  2042
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2041  1 0.6400
+2042  1 0.6400
+ Recruitment deviations
+Reg    2041    2042
+  1  0.3552 -0.3716
+ projection        2042        2043
+ Sigma R values
+ 2043  2044
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2043  1 0.6400
+2044  1 0.6400
+ Recruitment deviations
+Reg    2043    2044
+  1 -1.9878 -0.3361
+ projection        2044        2045
+ Sigma R values
+ 2045  2046
+0.800 0.800
+ Variance covariance matrix for rec devs
+ Yr  Reg     1
+2045  1 0.6400
+2046  1 0.6400
+ Recruitment deviations
+Reg    2045    2046
+  1 -0.2186 -0.8727

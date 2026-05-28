@@ -1,0 +1,1487 @@
+sinatra.f90:2104:23:
+
+ 2104 |            DO 8412 Ireg=1,Nreg
+      |                              1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8412 at (1)
+sinatra.f90:2105:21:
+
+ 2105 |              DO 8412 Sex=1,2
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8412 at (1)
+sinatra.f90:2106:27:
+
+ 2106 |               DO 8412 Age=0,MaxAge
+      |                                  1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8412 at (1)
+sinatra.f90:3665:18:
+
+ 3665 |           DO 2000 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 2000 at (1)
+sinatra.f90:3670:22:
+
+ 3670 |                 DO 2001 Age=0,MaxAge
+      |                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 2001 at (1)
+sinatra.f90:3677:24:
+
+ 3677 |             DO 2002 Ireg=1,Nreg
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 2002 at (1)
+sinatra.f90:3708:18:
+
+ 3708 |           DO 2010 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 2010 at (1)
+sinatra.f90:3724:22:
+
+ 3724 |           DO 2020 Ireg=1,Nreg
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 2020 at (1)
+sinatra.f90:3725:19:
+
+ 3725 |            DO 2020 Sex=1,2
+      |                          1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 2020 at (1)
+sinatra.f90:3749:20:
+
+ 3749 |      DO 1210 Sex=1,2
+      |                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 1210 at (1)
+sinatra.f90:3750:23:
+
+ 3750 |           DO 1210 Ireg=1,Nreg
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 1210 at (1)
+sinatra.f90:3753:27:
+
+ 3753 |         DO 1211 Iflt=1,Nflt
+      |                           1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 1211 at (1)
+sinatra.f90:3814:21:
+
+ 3814 |           DO 641 Istk=1,Nstk
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 641 at (1)
+sinatra.f90:3815:18:
+
+ 3815 |            DO 641 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 641 at (1)
+sinatra.f90:3816:24:
+
+ 3816 |             DO 641 Age=0,MaxAge
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 641 at (1)
+sinatra.f90:3820:24:
+
+ 3820 |                   DO 641,Ilen=1,Nlen
+      |                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 641 at (1)
+sinatra.f90:3852:21:
+
+ 3852 |          DO 2100 Ireg=1,Nreg
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 2100 at (1)
+sinatra.f90:3880:19:
+
+ 3880 |          DO 100 Sex=1,2
+      |                          1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 100 at (1)
+sinatra.f90:3881:21:
+
+ 3881 |           DO 100 Ireg=1,Nreg
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 100 at (1)
+sinatra.f90:3889:24:
+
+ 3889 |            DO 100 Iyr=Yr1+1,Yr2
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 100 at (1)
+sinatra.f90:3902:25:
+
+ 3902 |                DO 102 Sex=1,2
+      |                                  1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 102 at (1)
+sinatra.f90:3903:27:
+
+ 3903 |                 DO 102 Ireg=1,Nreg
+      |                                  1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 102 at (1)
+sinatra.f90:3938:19:
+
+ 3938 |          DO 80 IStk=1,Nstk
+      |                          1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 80 at (1)
+sinatra.f90:3939:16:
+
+ 3939 |           DO 80 Sex=1,2
+      |                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 80 at (1)
+sinatra.f90:3940:21:
+
+ 3940 |            DO 80 Iyr=Yr1,Yr2
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 80 at (1)
+sinatra.f90:3979:15:
+
+ 3979 |          DO 70 Sex=1,2
+      |                      1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 70 at (1)
+sinatra.f90:3980:20:
+
+ 3980 |           DO 70 Iyr=Yr1,Yr2
+      |                           1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 70 at (1)
+sinatra.f90:3981:22:
+
+ 3981 |            DO 70 Age=0,MaxAge
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 70 at (1)
+sinatra.f90:4004:16:
+
+ 4004 |           DO 75 Sex=1,2
+      |                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 75 at (1)
+sinatra.f90:4005:25:
+
+ 4005 |             DO 75 Ilen=Nlen,1,-1
+      |                                1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 75 at (1)
+sinatra.f90:4035:15:
+
+ 4035 |          DO 70 Sex=1,2
+      |                      1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 70 at (1)
+sinatra.f90:4036:20:
+
+ 4036 |           DO 70 Iyr=Yr1,Yr2
+      |                           1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 70 at (1)
+sinatra.f90:4037:22:
+
+ 4037 |            DO 70 Age=0,MaxAge
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 70 at (1)
+sinatra.f90:4058:16:
+
+ 4058 |           DO 75 Sex=1,2
+      |                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 75 at (1)
+sinatra.f90:4059:21:
+
+ 4059 |            DO 75 Iyr=Yr1,Yr2
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 75 at (1)
+sinatra.f90:4060:25:
+
+ 4060 |             DO 75 Ilen=Nlen,1,-1
+      |                                1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 75 at (1)
+sinatra.f90:4098:21:
+
+ 4098 |          DO 90 Iyr=Yr1+1,Yr2
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 90 at (1)
+sinatra.f90:4124:25:
+
+ 4124 |       DO 92 Istk = 1,Nstk
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 92 at (1)
+sinatra.f90:4125:27:
+
+ 4125 |        DO 92 Ireg = 1, Nreg
+      |                           1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 92 at (1)
+sinatra.f90:4126:23:
+
+ 4126 |         DO 92 Sex = 1,2
+      |                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 92 at (1)
+sinatra.f90:4127:29:
+
+ 4127 |          DO 92 Age = 0,MaxAge
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 92 at (1)
+sinatra.f90:4154:21:
+
+ 4154 |          DO 94 Iyr=Yr1+1,Yr2
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 94 at (1)
+sinatra.f90:4239:22:
+
+ 4239 |          DO 210 Iyr=Yr1+1,Yr2
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 210 at (1)
+sinatra.f90:4265:20:
+
+ 4265 |          DO 220 Ilen=1,Nlen
+      |                           1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 220 at (1)
+sinatra.f90:4274:21:
+
+ 4274 |           DO 222 Ilen=1,Nlen
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 222 at (1)
+sinatra.f90:4308:20:
+
+ 4308 |          DO 230 Istk=1,Nstk
+      |                           1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 230 at (1)
+sinatra.f90:4309:20:
+
+ 4309 |       DO 230 Sex=1,2
+      |                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 230 at (1)
+sinatra.f90:4310:22:
+
+ 4310 |            DO 230 Iyr=Yr1,Yr2
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 230 at (1)
+sinatra.f90:4313:22:
+
+ 4313 |                   DO 231 Ilen=1,Nlen
+      |                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 231 at (1)
+sinatra.f90:4346:25:
+
+ 4346 |           DO 240 Iyr=Yr1,Yr2
+      |                                   1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 240 at (1)
+sinatra.f90:4362:26:
+
+ 4362 |           DO 241 Iyr = Yr1+1, Yr2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 241 at (1)
+sinatra.f90:4391:21:
+
+ 4391 |           DO 242 Iyr=Yr1,Yr2
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 242 at (1)
+sinatra.f90:4417:31:
+
+ 4417 |          DO 250 Igam=1,Retflag(Iflt+1)
+      |                                      1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 250 at (1)
+sinatra.f90:4448:16:
+
+ 4448 |           DO 20 Sex=1,2
+      |                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 20 at (1)
+sinatra.f90:4449:22:
+
+ 4449 |            DO 20 Age=0,MaxAge
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 20 at (1)
+sinatra.f90:4456:16:
+
+ 4456 |           DO 29 Sex=1,2
+      |                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 29 at (1)
+sinatra.f90:4457:22:
+
+ 4457 |            DO 29 Age=0,MaxAge
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 29 at (1)
+sinatra.f90:4614:17:
+
+ 4614 |          DO 25 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 25 at (1)
+sinatra.f90:4616:22:
+
+ 4616 |           DO 25 Iyr=Yr1+1,Yr2
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 25 at (1)
+sinatra.f90:4645:16:
+
+ 4645 |           DO 30 Sex=1,2
+      |                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 30 at (1)
+sinatra.f90:4646:22:
+
+ 4646 |            DO 30 Age=0,MaxAge
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 30 at (1)
+sinatra.f90:4654:16:
+
+ 4654 |           DO 36 Sex=1,2
+      |                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 36 at (1)
+sinatra.f90:4655:22:
+
+ 4655 |            DO 36 Age=0,MaxAge
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 36 at (1)
+sinatra.f90:4682:16:
+
+ 4682 |           DO 31 Sex=1,2
+      |                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 31 at (1)
+sinatra.f90:4683:22:
+
+ 4683 |            DO 31 Age=0,MaxAge
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 31 at (1)
+sinatra.f90:4691:17:
+
+ 4691 |          DO 35 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 35 at (1)
+sinatra.f90:4693:22:
+
+ 4693 |           DO 35 Iyr=Yr1+1,Yr2
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 35 at (1)
+sinatra.f90:4721:16:
+
+ 4721 |          DO 650 Sex=1,2
+      |                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 650 at (1)
+sinatra.f90:4748:16:
+
+ 4748 |           DO 40 Sex=1,2
+      |                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 40 at (1)
+sinatra.f90:4759:17:
+
+ 4759 |          DO 45 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 45 at (1)
+sinatra.f90:4762:22:
+
+ 4762 |           DO 45 Iyr=Yr1+1,Yr2
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 45 at (1)
+sinatra.f90:4856:22:
+
+ 4856 |           DO 261 Ireg=1,Nreg
+      |                             1   
+Warning: Fortran 2018 deleted feature: Shared DO termination label 261 at (1)
+sinatra.f90:4927:22:
+
+ 4927 |           DO 631 Age=1,MaxAge
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 631 at (1)
+sinatra.f90:4942:24:
+
+ 4942 |           DO 633 Age=0,MaxAge-1
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 633 at (1)
+sinatra.f90:4943:18:
+
+ 4943 |            DO 633 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 633 at (1)
+sinatra.f90:4944:23:
+
+ 4944 |             DO 633 Ilen=1,Nlen
+      |                              1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 633 at (1)
+sinatra.f90:4979:24:
+
+ 4979 |           DO 635 Age=0,MaxAge-1
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 635 at (1)
+sinatra.f90:4981:22:
+
+ 4981 |            DO 635 Ilen=1,Nlen
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 635 at (1)
+sinatra.f90:5028:23:
+
+ 5028 |          DO 50 Iyr=Yr1+1,Yr2+1
+      |                              1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 50 at (1)
+sinatra.f90:5061:15:
+
+ 5061 |          DO 60 Sex=1,2
+      |                      1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 60 at (1)
+sinatra.f90:5069:26:
+
+ 5069 |                DO 62 Age=0,MaxAge
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 62 at (1)
+sinatra.f90:5073:27:
+
+ 5073 |          DO 63 Age=0,Maxage
+      |                           1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 63 at (1)
+sinatra.f90:5081:29:
+
+ 5081 |             DO 60 Iyr=Yr1,Yr2
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 60 at (1)
+sinatra.f90:5083:24:
+
+ 5083 |              DO 60 Age=0,MaxAge
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 60 at (1)
+sinatra.f90:5084:23:
+
+ 5084 |              DO 60 Ireg=1,Nreg
+      |                              1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 60 at (1)
+sinatra.f90:5093:15:
+
+ 5093 |          DO 64 Sex=1,2
+      |                      1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 64 at (1)
+sinatra.f90:5115:27:
+
+ 5115 |          DO 65 Age=0,Maxage
+      |                           1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 65 at (1)
+sinatra.f90:5124:29:
+
+ 5124 |             DO 64 Iyr=Yr1,Yr2
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 64 at (1)
+sinatra.f90:5128:24:
+
+ 5128 |               DO 68 Ireg=1,Nreg
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 68 at (1)
+sinatra.f90:5167:16:
+
+ 5167 |          DO 600 Sex=1,2
+      |                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 600 at (1)
+sinatra.f90:5189:23:
+
+ 5189 |            DO 606 Age=1,MaxAge
+      |                              1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 606 at (1)
+sinatra.f90:5191:20:
+
+ 5191 |                 DO 606 Jreg=1,Nreg
+      |                                  1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 606 at (1)
+sinatra.f90:5201:24:
+
+ 5201 |             DO 607 Age=0,MaxAge
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 607 at (1)
+sinatra.f90:5237:25:
+
+ 5237 |              DO 609 Age=0,MaxAge
+      |                                1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 609 at (1)
+sinatra.f90:5245:24:
+
+ 5245 |             DO 610 Age=0,MaxAge
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 610 at (1)
+sinatra.f90:5268:21:
+
+ 5268 |           DO 615 Ireg=1,Nreg
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 615 at (1)
+sinatra.f90:5269:18:
+
+ 5269 |            DO 615 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 615 at (1)
+sinatra.f90:5300:25:
+
+ 5300 |        DO 620 Ireg=1,Nreg
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 620 at (1)
+sinatra.f90:5307:18:
+
+ 5307 |            DO 617 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 617 at (1)
+sinatra.f90:5397:22:
+
+ 5397 |           DO 902 Age=0,MaxAge
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 902 at (1)
+sinatra.f90:5460:23:
+
+ 5460 |           DO 1010 Age=1,MaxAge
+      |                              1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 1010 at (1)
+sinatra.f90:5486:23:
+
+ 5486 |           DO 1050 Age=0,MaxAge
+      |                              1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 1050 at (1)
+C.F90:597:25:
+
+  597 |       ASSIGN 10 TO i99999
+      |                         1
+Warning: Deleted feature: ASSIGN statement at (1)
+C.F90:603:25:
+
+  603 |       ASSIGN 20 TO i99999
+      |                         1
+Warning: Deleted feature: ASSIGN statement at (1)
+C.F90:640:25:
+
+  640 |       ASSIGN 90 TO i99999
+      |                         1
+Warning: Deleted feature: ASSIGN statement at (1)
+C.F90:663:26:
+
+  663 |       ASSIGN 130 TO i99999
+      |                          1
+Warning: Deleted feature: ASSIGN statement at (1)
+C.F90:697:26:
+
+  697 |       ASSIGN 200 TO i99999
+      |                          1
+Warning: Deleted feature: ASSIGN statement at (1)
+C.F90:731:26:
+
+  731 |       ASSIGN 270 TO i99999
+      |                          1
+Warning: Deleted feature: ASSIGN statement at (1)
+C.F90:834:18:
+
+  834 |       GO TO i99999
+      |                  1
+Warning: Deleted feature: Assigned GOTO statement at (1)
+C.F90:971:25:
+
+  971 |       ASSIGN 10 TO i99999
+      |                         1
+Warning: Deleted feature: ASSIGN statement at (1)
+C.F90:979:25:
+
+  979 |       ASSIGN 20 TO i99999
+      |                         1
+Warning: Deleted feature: ASSIGN statement at (1)
+C.F90:1060:26:
+
+ 1060 |       ASSIGN 200 TO i99999
+      |                          1
+Warning: Deleted feature: ASSIGN statement at (1)
+C.F90:1152:18:
+
+ 1152 |       GO TO i99999
+      |                  1
+Warning: Deleted feature: Assigned GOTO statement at (1)
+C.F90:1541:28:
+
+ 1541 |       IF (iop-2) 280,290,300
+      |                            1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+C.F90:1579:28:
+
+ 1579 |       IF (iop-2) 340,350,360
+      |                            1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+C.F90:1770:21:
+
+ 1770 |       IF (m) 40,30,10
+      |                     1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+C.F90:2040:21:
+
+ 2040 |       IF (t) 40,10,20
+      |                     1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:79:22:
+
+   79 |       IF(IPRINT)5,5,55
+      |                      1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:97:18:
+
+   97 |       IF(NAP)3,4,3
+      |                  1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:103:17:
+
+  103 |     6 G(1,I)=F(I)
+      |                 1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 6 at (1)
+Dminim.For:108:20:
+
+  108 |     9 G(IROW,J)=F(J)
+      |                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 9 at (1)
+Dminim.For:116:17:
+
+  116 |    11 F(J)=G(I,J)
+      |                 1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 11 at (1)
+Dminim.For:121:24:
+
+  121 |       IF(IPRINT)10,10,12
+      |                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:136:30:
+
+  136 |       IF(H(I)-H(IMAX))15,15,14
+      |                              1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:138:30:
+
+  138 |    15 IF(H(I)-H(IMIN))16,13,13
+      |                              1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:147:19:
+
+  147 |    17 PBAR(I)=0.0D0
+      |                   1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 17 at (1)
+Dminim.For:149:24:
+
+  149 |       IF(I-IMAX)19,18,19
+      |                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:151:30:
+
+  151 |    20 PBAR(J) = PBAR(J)+G(I,J)
+      |                              1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 20 at (1)
+Dminim.For:154:27:
+
+  154 |   602 PBAR(J) = PBAR(J)/NAP
+      |                           1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 602 at (1)
+Dminim.For:159:44:
+
+  159 |    21 PSTAR(I)=A*(PBAR(I)-G(IMAX,I))+PBAR(I)
+      |                                            1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 21 at (1)
+Dminim.For:166:24:
+
+  166 |       IF(IPRINT)57,57,56
+      |                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:168:28:
+
+  168 |    57 IF(HSTAR-HMIN)22,23,23
+      |                            1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:173:43:
+
+  173 |    24 PSTST(I)=C*(PSTAR(I)-PBAR(I))+PBAR(I)
+      |                                           1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 24 at (1)
+Dminim.For:176:24:
+
+  176 |       IF(IPRINT)60,60,59
+      |                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:178:28:
+
+  178 |    60 IF(HSTST-HMIN)25,26,26
+      |                            1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:191:24:
+
+  191 |       IF(I-IMAX)29,28,29
+      |                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:192:28:
+
+  192 |    29 IF(HSTAR-H(I))26,28,28
+      |                            1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:205:28:
+
+  205 |       IF(HSTAR-HMAX)30,30,31
+      |                            1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:212:44:
+
+  212 |    33 PSTST(I)=B*G(IMAX,I)+(1.0D0-B)*PBAR(I)
+      |                                            1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 33 at (1)
+Dminim.For:215:25:
+
+  215 |       IF(IPRINT) 63,63,62
+      |                         1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:217:28:
+
+  217 |    63 IF(HSTST-HMAX)35,35,34
+      |                            1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:235:19:
+
+  235 |    39 F(J) = G(I,J)
+      |                   1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 39 at (1)
+Dminim.For:238:24:
+
+  238 |       IF(IPRINT)38,38,65
+      |                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:249:28:
+
+  249 |    41 IF(LOOP-NLOOP)45,46,45
+      |                            1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:257:22:
+
+  257 |    42 HMEAN=HMEAN+H(I)
+      |                      1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 42 at (1)
+Dminim.For:260:33:
+
+  260 |   601 HSTD = HSTD+(H(I)-HMEAN)**2
+      |                                 1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 601 at (1)
+Dminim.For:269:22:
+
+  269 |    54 F(I)=F(I)+G(J,I)
+      |                      1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 54 at (1)
+Dminim.For:279:28:
+
+  279 |   700 IF(NEVAL-MAX) 44,44,43
+      |                            1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:280:24:
+
+  280 |    43 IF(IPRINT)68,67,67
+      |                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:291:29:
+
+  291 |    44 IF(HSTD-STOPCR)72,48,48
+      |                             1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:299:24:
+
+  299 |    72 IF(IPRINT)47,70,70
+      |                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:308:23:
+
+  308 |    47 IF(IFLAG)49,50,49
+      |                       1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:320:24:
+
+  320 |       IF(IPRINT)74,73,73
+      |                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:342:25:
+
+  342 |       IF(IQUAD)200,75,200
+      |                         1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:344:27:
+
+  344 |   200 IF(IPRINT)233,232,232
+      |                           1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:359:30:
+
+  359 |       IF(TEST-SIMP)202,201,201
+      |                              1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:362:21:
+
+  362 |   203 PSTST(J)=G(I,J)
+      |                     1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 203 at (1)
+Dminim.For:373:37:
+
+  373 |   206 PSTAR(J)=(G(1,J)+G(I1,J))/2.0D0
+      |                                     1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 206 at (1)
+Dminim.For:388:38:
+
+  388 |   209 PSTST(K)=(G(I2,K)+G(J1,K))/2.0D0
+      |                                      1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 209 at (1)
+Dminim.For:405:50:
+
+  405 |   237 AVAL(I)=2.0D0*AVAL(I)-(H(I1)+3.0D0*A0)/2.0D0
+      |                                                  1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 237 at (1)
+Dminim.For:411:20:
+
+  411 |   219 PMIN(I)=G(1,I)
+      |                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 219 at (1)
+Dminim.For:414:20:
+
+  414 |       DO 211 J=1,NOP
+      |                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 211 at (1)
+Dminim.For:419:20:
+
+  419 |       DO 212 J=1,NOP
+      |                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 212 at (1)
+Dminim.For:436:24:
+
+  436 |       IF(J-I)216,216,215
+      |                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:448:28:
+
+  448 |   218 YMIN=YMIN+H(I)*AVAL(I)
+      |                            1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 218 at (1)
+Dminim.For:452:20:
+
+  452 |       DO 220 J=1,NAP
+      |                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 220 at (1)
+Dminim.For:453:35:
+
+  453 |   220 PSTST(I)=PSTST(I)+H(J)*G(J,I)
+      |                                   1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 220 at (1)
+Dminim.For:455:30:
+
+  455 |   221 PMIN(I)=PMIN(I)-PSTST(I)
+      |                              1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 221 at (1)
+Dminim.For:456:27:
+
+  456 |       IF(IPRINT)223,222,222
+      |                           1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:470:24:
+
+  470 |       IF(K-J)227,227,228
+      |                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:481:31:
+
+  481 |   231 VC(IJ)=VC(IJ)+H(K)*G(K,J)
+      |                               1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 231 at (1)
+Dminim.For:490:18:
+
+  490 |   234 VAR(I)=VC(J)
+      |                  1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 234 at (1)
+Dminim.For:491:27:
+
+  491 |       IF(IPRINT)235,236,236
+      |                           1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+Dminim.For:525:35:
+
+  525 |   705 VC(IJ) = VC(IJ)*VC(II)*VC(JJ)
+      |                                   1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 705 at (1)
+Dminim.For:526:15:
+
+  526 |   701 IJ = IJ+1
+      |               1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 701 at (1)
+Matrix.for:33:21:
+
+   33 |        DO 10 J = 1,m
+      |                     1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 10 at (1)
+Matrix.for:50:20:
+
+   50 |        DO 10 J = 1,p
+      |                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 10 at (1)
+Matrix.for:52:21:
+
+   52 |         DO 10 K = 1,m
+      |                     1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 10 at (1)
+GenData.f90:411:23:
+
+  411 |           DO 8620 Ireg=1,Nreg
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8620 at (1)
+GenData.f90:423:23:
+
+  423 |           DO 8621 Ireg=1,Nreg
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8621 at (1)
+GenData.f90:483:23:
+
+  483 |           DO 9621 Ireg=1,Nreg
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9621 at (1)
+GenData.f90:520:19:
+
+  520 |            DO 9641 Sex=1,2
+      |                          1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9641 at (1)
+GenData.f90:521:25:
+
+  521 |             DO 9641 Age=0,MaxAge
+      |                                1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9641 at (1)
+GenData.f90:523:25:
+
+  523 |                   DO 9641,Ilen=1,Nlen
+      |                                     1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9641 at (1)
+GenData.f90:560:22:
+
+  560 |           DO 8610 Ireg=1,Nreg
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8610 at (1)
+GenData.f90:590:22:
+
+  590 |           DO 8671 Ireg=1,Nreg
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8671 at (1)
+GenData.f90:685:22:
+
+  685 |                  DO 8602 Ireg=1,Nreg
+      |                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8602 at (1)
+GenData.f90:686:19:
+
+  686 |                   DO 8602 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8602 at (1)
+GenData.f90:694:22:
+
+  694 |                  DO 8603 Ireg=1,Nreg
+      |                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8603 at (1)
+GenData.f90:695:19:
+
+  695 |                   DO 8603 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8603 at (1)
+GenData.f90:729:22:
+
+  729 |                  DO 8601 Ireg=1,Nreg
+      |                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8601 at (1)
+GenData.f90:730:19:
+
+  730 |                   DO 8601 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8601 at (1)
+GenData.f90:799:22:
+
+  799 |                  DO 9606 Istk=1,Nstk
+      |                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9606 at (1)
+GenData.f90:800:24:
+
+  800 |                   DO 9606 Age=0,MaxAge
+      |                                      1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9606 at (1)
+GenData.f90:801:24:
+
+  801 |                    DO 9606 Ilen=1,Nlen
+      |                                      1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9606 at (1)
+GenData.f90:897:22:
+
+  897 |                  DO 8202 Ireg=1,Nreg
+      |                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8202 at (1)
+GenData.f90:898:19:
+
+  898 |                   DO 8202 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8202 at (1)
+GenData.f90:907:22:
+
+  907 |                  DO 8203 Ireg=1,Nreg
+      |                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8203 at (1)
+GenData.f90:908:19:
+
+  908 |                   DO 8203 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8203 at (1)
+GenData.f90:915:22:
+
+  915 |                  DO 8210 Ireg=1,Nreg
+      |                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8210 at (1)
+GenData.f90:916:19:
+
+  916 |                   DO 8210 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8210 at (1)
+GenData.f90:1029:22:
+
+ 1029 |                  DO 9212 Istk=1,Nstk
+      |                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9212 at (1)
+GenData.f90:1030:24:
+
+ 1030 |                   DO 9212 Age=0,MaxAge
+      |                                      1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9212 at (1)
+GenData.f90:1031:24:
+
+ 1031 |                    DO 9212 Ilen=1,Nlen
+      |                                      1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9212 at (1)
+GenData.f90:1208:24:
+
+ 1208 |            DO 8402 Age=0,MaxAge
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8402 at (1)
+GenData.f90:1262:24:
+
+ 1262 |            DO 8402 Age=0,MaxAge
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8402 at (1)
+GenData.f90:1309:21:
+
+ 1309 |          DO 8400 Istk=1,Nstk
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8400 at (1)
+GenData.f90:1351:21:
+
+ 1351 |          DO 8400 Ilen=1,Nlen
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8400 at (1)
+GenData.f90:1356:21:
+
+ 1356 |          DO 8400 Istk=1,Nstk
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8400 at (1)
+GenData.f90:1397:21:
+
+ 1397 |          DO 8300 Ireg=1,Nreg
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8300 at (1)
+GenData.f90:1398:18:
+
+ 1398 |           DO 8300 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8300 at (1)
+GenData.f90:1402:26:
+
+ 1402 |              DO 8301 Age=0,MaxAge
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8301 at (1)
+GenData.f90:1463:25:
+
+ 1463 |             DO 8801 Ireg=1,Nreg
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8801 at (1)
+GenData.f90:1466:19:
+
+ 1466 |                  DO 8802 Sex=1,2
+      |                                1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8802 at (1)
+GenData.f90:1497:24:
+
+ 1497 |             DO 8803 Ireg=1,Nreg
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8803 at (1)
+GenData.f90:1528:24:
+
+ 1528 |             DO 8804 Ireg=1,Nreg
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8804 at (1)
+GenData.f90:1553:24:
+
+ 1553 |             DO 8805 Ireg=1,Nreg
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8805 at (1)
+GenData.f90:1560:20:
+
+ 1560 |                    DO 8806 Sex=1,2
+      |                                  1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8806 at (1)
+GenData.f90:1573:19:
+
+ 1573 |                   DO 8807 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8807 at (1)
+GenData.f90:1591:23:
+
+ 1591 |                   DO 8808 Ireg=1,Nreg
+      |                                     1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8808 at (1)
+GenData.f90:1592:19:
+
+ 1592 |                   DO 8808 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8808 at (1)
+GenData.f90:1653:22:
+
+ 1653 |                  DO 8812 Ireg=1,Nreg
+      |                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8812 at (1)
+GenData.f90:1654:19:
+
+ 1654 |                  DO 8812 Sex=1,2
+      |                                1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8812 at (1)
+GenData.f90:1655:23:
+
+ 1655 |                  DO 8812 Age=0,MaxAge
+      |                                     1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8812 at (1)
+GenData.f90:1676:25:
+
+ 1676 |             DO 8811 Ireg=1,Nreg
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8811 at (1)
+GenData.f90:1678:19:
+
+ 1678 |                  DO 8821 Sex=1,2
+      |                                1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8821 at (1)
+GenData.f90:1679:23:
+
+ 1679 |                  DO 8821 Age=0,MaxAge
+      |                                     1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8821 at (1)
+GenData.f90:1691:24:
+
+ 1691 |             DO 8814 Ireg=1,Nreg
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8814 at (1)
+GenData.f90:1722:24:
+
+ 1722 |             DO 8815 Ireg=1,Nreg
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8815 at (1)
+GenData.f90:1746:23:
+
+ 1746 |                   DO 8818 Ireg=1,Nreg
+      |                                     1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8818 at (1)
+GenData.f90:1747:19:
+
+ 1747 |                   DO 8818 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8818 at (1)
+GenData.f90:2470:24:
+
+ 2470 |          DO 9020 Istk=1,Nstk
+      |                                  1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9020 at (1)
+GenData.f90:2471:28:
+
+ 2471 |            DO 9020 Ireg=1,Nreg
+      |                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9020 at (1)
+GenData.f90:2472:21:
+
+ 2472 |             DO 9020 Sex=1,2
+      |                           1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9020 at (1)
+GenData.f90:2499:24:
+
+ 2499 |          DO 9021 Istk=1,Nstk
+      |                                  1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9021 at (1)
+GenData.f90:2500:18:
+
+ 2500 |           DO 9021 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9021 at (1)
+GenData.f90:2599:18:
+
+ 2599 |           DO 9010 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9010 at (1)
+GenData.f90:2600:27:
+
+ 2600 |        DO 9010 Age=0,MaxAge
+      |                           1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9010 at (1)
+GenData.f90:2834:24:
+
+ 2834 |             DO 9001 Iflt=1,Nflt
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9001 at (1)
+GenData.f90:2842:23:
+
+ 2842 |                   DO 9007 Istk=1,Nstk
+      |                                     1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9007 at (1)
+GenData.f90:2843:21:
+
+ 2843 |                    DO 9007 Sex=1,2
+      |                                  1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9007 at (1)
+GenData.f90:2844:28:
+
+ 2844 |                     DO 9007 Age=0,MaxAge
+      |                                                 1       
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9007 at (1)
+GenData.f90:2902:21:
+
+ 2902 |              DO 9012 Sex=1,2
+      |                            1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9012 at (1)
+GenData.f90:2903:29:
+
+ 2903 |           DO 9012 Istk=1,Nstk
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9012 at (1)
+GenData.f90:2915:19:
+
+ 2915 |                   DO 9013 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9013 at (1)
+GenData.f90:2916:24:
+
+ 2916 |                    DO 9013 Istk=1,Nstk
+      |                                      1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9013 at (1)
+GenData.f90:2942:25:
+
+ 2942 |                     DO 9015 Istk=1,Nstk
+      |                                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9015 at (1)
+GenData.f90:3046:23:
+
+ 3046 |                   DO 9007 Istk=1,Nstk
+      |                                     1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9007 at (1)
+GenData.f90:3047:21:
+
+ 3047 |                    DO 9007 Sex=1,2
+      |                                  1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9007 at (1)
+GenData.f90:3048:28:
+
+ 3048 |                     DO 9007 Age=0,MaxAge
+      |                                                 1       
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9007 at (1)
+GenData.f90:3118:29:
+
+ 3118 |           DO 9002 Istk=1,Nstk
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9002 at (1)
+GenData.f90:3119:25:
+
+ 3119 |                    DO 9002 Age=0,MaxAge
+      |                                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9002 at (1)
+GenData.f90:3130:23:
+
+ 3130 |                   DO 9003 Istk=1,Nstk
+      |                                     1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9003 at (1)
+GenData.f90:3131:25:
+
+ 3131 |                    DO 9003 Age=0,MaxAge
+      |                                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9003 at (1)
+GenData.f90:3211:19:
+
+ 3211 |                   DO 9007 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9007 at (1)
+GenData.f90:3212:25:
+
+ 3212 |                    DO 9007 Age=0,MaxAge
+      |                                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9007 at (1)
+GenData.f90:3214:22:
+
+ 3214 |                         DO 9007 Ilen=1,Nlen
+      |                                           1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9007 at (1)
+GenData.f90:3225:19:
+
+ 3225 |                   DO 9008 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9008 at (1)
+GenData.f90:3226:25:
+
+ 3226 |                    DO 9008 Age=0,MaxAge
+      |                                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9008 at (1)
+GenData.f90:3237:21:
+
+ 3237 |                     DO 9009 Sex=1,2
+      |                                   1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9009 at (1)
+GenData.f90:3265:19:
+
+ 3265 |                   DO 9002 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9002 at (1)
+GenData.f90:3266:25:
+
+ 3266 |                    DO 9002 Age=0,MaxAge
+      |                                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9002 at (1)
+GenData.f90:3268:48:
+
+ 3268 |                     DO 9002 Ilen=Lowlen(Igroup),Toplen(Igroup)
+      |                                                              1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9002 at (1)
+GenData.f90:3278:19:
+
+ 3278 |                   DO 9003 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9003 at (1)
+GenData.f90:3279:25:
+
+ 3279 |                    DO 9003 Age=0,MaxAge
+      |                                       1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9003 at (1)
+GenData.f90:3290:19:
+
+ 3290 |                   DO 9004 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9004 at (1)
+GenData.f90:3301:19:
+
+ 3301 |                   DO 9005 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 9005 at (1)
+GenData.f90:3400:23:
+
+ 3400 |           DO 8108 Ireg=1,Nreg
+      |                              1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8108 at (1)
+GenData.f90:3775:23:
+
+ 3775 |           DO 8508 Ireg=1,Nreg
+      |                              1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8508 at (1)
+GenData.f90:4808:26:
+
+ 4808 |      DO 8715 Iyr=Fyear,Yr2
+      |                          1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8715 at (1)
+GenData.f90:4809:22:
+
+ 4809 |           DO 8715 Iflt=1,Nflt
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 8715 at (1)
+sinatra.f90:5979:23:
+
+ 5979 |            DO 3010 Ireg=1,Nreg
+      |                              1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3010 at (1)
+sinatra.f90:5997:23:
+
+ 5997 |            DO 3011 Ireg=1,Nreg
+      |                              1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3011 at (1)
+sinatra.f90:6107:22:
+
+ 6107 |           DO 3025 Ireg=1,Nreg
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3025 at (1)
+sinatra.f90:6126:25:
+
+ 6126 |              DO 3021 Ireg=1,Nreg
+      |                                1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3021 at (1)
+sinatra.f90:6133:25:
+
+ 6133 |              DO 3022 Ireg=1,Nreg
+      |                                1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3022 at (1)
+sinatra.f90:6761:22:
+
+ 6761 |           DO 3000 Ireg=1,Nreg
+      |                             1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3000 at (1)
+sinatra.f90:6762:19:
+
+ 6762 |            DO 3000 Sex=1,2
+      |                          1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3000 at (1)
+sinatra.f90:6767:18:
+
+ 6767 |           DO 3001 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3001 at (1)
+sinatra.f90:6768:23:
+
+ 6768 |            DO 3001 Ireg=1,Nreg
+      |                              1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3001 at (1)
+sinatra.f90:6773:20:
+
+ 6773 |           DO 3002 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3002 at (1)
+sinatra.f90:6778:20:
+
+ 6778 |           DO 3003 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3003 at (1)
+sinatra.f90:6783:20:
+
+ 6783 |           DO 3004 Sex=1,2
+      |                                 1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3004 at (1)
+sinatra.f90:6792:18:
+
+ 6792 |           DO 3006 Sex=1,2
+      |                         1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3006 at (1)
+sinatra.f90:6793:25:
+
+ 6793 |            DO 3006 Age =0,MaxAge
+      |                                1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3006 at (1)
+sinatra.f90:6794:24:
+
+ 6794 |             DO 3006 Ireg=1,Nreg
+      |                               1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 3006 at (1)
+GenData.f90:3535:45:
+
+ 3535 |             READ(13,*) (NTagRelease(Iflt,0,Iyr),Iyr=Yr1,Lyear)
+      |                                                    1
+Warning: Deleted feature: Start expression in DO loop at (1) must be integer
+GenData.f90:3536:47:
+
+ 3536 |                             WRITE(*,*) (NTagRelease(Iflt,0,Iyr),Iyr=Yr1,Lyear)
+      |                                                                    1
+Warning: Deleted feature: Start expression in DO loop at (1) must be integer
+GenData.f90:3538:48:
+
+ 3538 |                  WRITE(98,'(A4,1x,200(I4,1x))') 'Ft',(Iyr,Iyr=Yr1,Lyear)
+      |                                                              1
+Warning: Deleted feature: Start expression in DO loop at (1) must be integer
+GenData.f90:3539:74:
+
+ 3539 |          WRITE(98,'(I4,1x,200(I6,1x))') Iflt,(NTagRelease(Iflt,0,Iyr),Iyr=Yr1,Lyear)
+      |                                                                          1
+Warning: Deleted feature: Start expression in DO loop at (1) must be integer
+Common.FOR:222:3:
+
+  222 | 999    CONTINUE
+      |   1
+......
+  236 |         GOTO 999
+      |                2
+Warning: Legacy Extension: Label at (1) is not in the same block as the GOTO statement at (2)
+Common.FOR:222:3:
+
+  222 | 999    CONTINUE
+      |   1
+......
+  249 |         GOTO 999
+      |                2
+Warning: Legacy Extension: Label at (1) is not in the same block as the GOTO statement at (2)
+GenData.f90:970:15:
+
+  970 |                             DO JJ=1,LenComp(Ilen)
+      |                                    1
+Warning: Deleted feature: End expression in DO loop at (1) must be integer
+GenData.f90:377:51:
+
+  377 |     IF (UseMCMC.EQ.1) TagAlpha(II,Iyr) = OpModPars(NOMpars(1)-(Nreg-EstTagID(II,3)))
+      |                                                   1
+Warning: Legacy Extension: REAL array index at (1)
+GenData.f90:4493:32:
+
+ 4493 |         IF (SUM(RetCatch(1:Nflt,1:Nreg,1915)).GT.0) THEN
+      |                                       1
+Warning: Array reference at (1) is out of bounds (1915 < 1990) in dimension 3
+GenData.f90:4495:36:
+
+ 4495 |         ELSEIF (SUM(RetCatch(1:Nflt,1:Nreg,1947)).GT.0) THEN
+      |                                           1
+Warning: Array reference at (1) is out of bounds (1947 < 1990) in dimension 3
+clang: warning: overriding deployment version from '16.0' to '26.0' [-Woverriding-deployment-version]
