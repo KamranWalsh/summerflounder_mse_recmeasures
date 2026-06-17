@@ -349,7 +349,7 @@ do_small_radar_plot <- function(metrics) {
   bounds <- tibble(mp = c("max","min"),
                    
                    #"total catch" = c(1,0),
-                   "kept:released" = c(1,0),
+                   "kept-to-released ratio" = c(1,0), #"kept:released" = c(1,0),
                    "kept per trip" = c(1,0),
                    "not overfishing" = c(1,0),
                    "not overfished" = c(1,0),
@@ -361,7 +361,7 @@ do_small_radar_plot <- function(metrics) {
                    #"mulen_release" = c(1,0),
                    "trophy" = c(1,0),
                   # "rec_removals" = c(1,0),
-                   "keep_one" = c(1,0))# ,
+                   "keep one fish" = c(1,0)) #"keep_one" = c(1,0))# ,
                  #  "prop_female" = c(1,0),
                   # "ntrips" = c(1,0)) #,
   #filter(metric %in% c("change_cs", "kept per trip", "kept:released", "not overfished", "not overfishing")) %>% 
@@ -399,19 +399,19 @@ do_small_radar_plot <- function(metrics) {
                   alpha("#56B4E9",0.9),
                   alpha("#009E73",0.9))
   
-  colors_fill2<-c(alpha("#1b9e77",0.1),
-                  alpha("#d95f02",0.1),
-                  alpha("#7570b3",0.1),
-                  alpha("#e7298a",0.1),
+  colors_fill2<-c(#alpha("#1b9e77",0.1),
+                  #alpha("#d95f02",0.1),
+                  #alpha("#7570b3",0.1),
+                  #alpha("#e7298a",0.1),
                   alpha("#66a61e",0.1),
                   alpha("#e6ab02",0.1),
                   alpha("#a6761d",0.1),
                   alpha("#d95f02",0.1))
   
-  colors_line2<-c(alpha("#1b9e77",0.9),
-                  alpha("#d95f02",0.9),
-                  alpha("#7570b3",0.9),
-                  alpha("#e7298a",0.9),
+  colors_line2<-c(#alpha("#1b9e77",0.9),
+                  #alpha("#d95f02",0.9),
+                  #alpha("#7570b3",0.9),
+                  #alpha("#e7298a",0.9),
                   alpha("#66a61e",0.9),
                   alpha("#e6ab02",0.9),
                   alpha("#a6761d",0.9),
@@ -2183,9 +2183,24 @@ metrics2 <- metrics %>%
                                             "rec_removals",
                                             "keep_one_range",
                                             "change_cs"#,
-                                            #"exp_keep"
-                                            #"gdp_mp1"
-                                            ))) 
+                                            ###"exp_keep"
+                                            ###"gdp_mp1"
+                                            )),
+      metric = fct_recode(factor(metric), 
+                          "discards per trip" = "rel per trip",
+                          "spawning biomass" = "spawning biomass",
+                           "number of trips" = "ntrips",
+                           "trophy" = "trophy",
+                           "not overfishing" = "not overfishing",
+                           "not overfished" = "not overfished",
+                           "kept per trip" = "kept per trip",
+                           "keep one fish" = "keep_one",
+                           "female harvest" = "prop_female",
+                           "kept-to-released ratio" = "kept:released",
+                           "consumer surplus" = "cs_per_trip",
+                           "recreational removals" = "rec_removals"
+      ))
+       
 
 #View(metrics2)
 ```
@@ -2293,6 +2308,10 @@ p2 <- metrics2 %>%
 #ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/boxplot-metrics1bmsy.png",p2,width=9,height=6)
 #ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/boxplot-metrics2bmsy.png",p2,width=9,height=6)
 #ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/boxplot-metrics03bmsy.png",p2,width=9,height=6)
+
+#ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/boxplot-metrics1bmsy_captions.png",p2,width=9,height=6)
+#ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/boxplot-metrics2bmsy_captions.png",p2,width=9,height=6)
+#ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/boxplot-metrics03bmsy_captions.png",p2,width=9,height=6)
 p2
 ```
 
@@ -2369,6 +2388,7 @@ p3 <- median_metrics %>%
    #filter(!metric %in% c("change_cs", "cs_per_trip")) %>%  -->
    #filter(!metric %in% c("expense","cs_per_trip","total catch")) %>%  -->
    filter(metric %in% c("kept:released", "kept per trip", "not overfished", "not overfishing",  "keep_one", "trophy")) %>%  
+   mutate(metric = fct_recode(factor(metric), "kept-to-released ratio" = "kept:released", "kept per trip" = "kept per trip", "not overfished" = "not overfished", "not overfishing" = "not overfishing",  "keep one fish" = "keep_one", "trophy" = "trophy")) %>%
    do_small_radar_plot()
 
 #REG
@@ -2387,6 +2407,7 @@ p3 <- median_metrics2 %>%
    #filter(!metric %in% c("change_cs", "cs_per_trip")) %>%  -->
    #filter(!metric %in% c("expense","cs_per_trip","total catch")) %>%  -->
    filter(metric %in% c("kept:released", "kept per trip", "not overfished", "not overfishing",  "keep_one", "trophy")) %>%  
+   mutate(metric = fct_recode(factor(metric), "kept-to-released ratio" = "kept:released", "kept per trip" = "kept per trip", "not overfished" = "not overfished", "not overfishing" = "not overfishing",  "keep one fish" = "keep_one", "trophy" = "trophy")) %>%
    do_small_radar_plot()
 
 ```
@@ -3932,24 +3953,38 @@ metricperformance_all <- diag_ts %>%
     TRUE ~ NA_character_ 
   )) %>% 
   select(isim, year, type, value, RegType, mp2, median, performance) %>%
-  filter(RegType == "All")
+  filter(RegType == "All") %>%
+  mutate(type = fct_recode(factor(type),
+                          "discards per trip" = "rel per trip",
+                          "spawning biomass" = "spawning biomass",
+                           "number of trips" = "ntrips",
+                           "trophy" = "trophy",
+                           "F/Fref" = "F/Fref",
+                           "B/Bref" = "B/Bref",
+                           "kept per trip" = "kept per trip",
+                           "keep one fish" = "keep_one",
+                           "female harvest" = "prop_female",
+                           "kept-to-released ratio" = "kept:released",
+                           "consumer surplus" = "cs_per_trip",
+                           "recreational removals" = "rec_removals"                   
+                           ))
 
-relpertrip <- metricperformance_all %>% filter(type == "rel per trip") %>%
+relpertrip <- metricperformance_all %>% filter(type == "discards per trip") %>% #filter(type == "rel per trip") %>%
   left_join(bagvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(seasvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(minlenvalues, by = c("isim", "year", "RegType", "mp2"))
               
-spawbio <- metricperformance_all %>% filter(type == "spawning biomass") %>%
+spawbio <- metricperformance_all %>% filter(type == "spawning biomass") %>% 
   left_join(bagvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(seasvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(minlenvalues, by = c("isim", "year", "RegType", "mp2"))
 
-ntrips <- metricperformance_all %>% filter(type == "ntrips") %>%
+ntrips <- metricperformance_all %>% filter(type == "number of trips") %>% #filter(type == "ntrips") %>%
   left_join(bagvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(seasvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(minlenvalues, by = c("isim", "year", "RegType", "mp2"))
 
-trophy <- metricperformance_all %>% filter(type == "trophy") %>%
+trophy <- metricperformance_all %>% filter(type == "trophy") %>% 
   left_join(bagvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(seasvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(minlenvalues, by = c("isim", "year", "RegType", "mp2")) 
@@ -3970,27 +4005,27 @@ keptpertrip <- metricperformance_all %>% filter(type == "kept per trip") %>%
   left_join(seasvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(minlenvalues, by = c("isim", "year", "RegType", "mp2"))
 
-keepone <- metricperformance_all %>% filter(type == "keep_one") %>%
+keepone <- metricperformance_all %>% filter(type == "keep one fish") %>% #filter(type == "keep_one") %>%
   left_join(bagvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(seasvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(minlenvalues, by = c("isim", "year", "RegType", "mp2"))
 
-propfemale <- metricperformance_all %>% filter(type == "prop_female") %>%
+propfemale <- metricperformance_all %>% filter(type == "female harvest") %>% #filter(type == "prop_female") %>%
   left_join(bagvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(seasvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(minlenvalues, by = c("isim", "year", "RegType", "mp2"))
 
-keptreleased <- metricperformance_all %>% filter(type == "kept:released") %>%
+keptreleased <- metricperformance_all %>% filter(type == "kept-to-released ratio") %>% #filter(type == "kept:released")
   left_join(bagvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(seasvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(minlenvalues, by = c("isim", "year", "RegType", "mp2"))
 
-cspertrip <- metricperformance_all %>% filter(type == "cs_per_trip") %>%
+cspertrip <- metricperformance_all %>% filter(type == "consumer surplus") %>% #filter(type == "cs_per_trip") %>%
   left_join(bagvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(seasvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(minlenvalues, by = c("isim", "year", "RegType", "mp2"))
 
-recremovals <- metricperformance_all %>% filter(type == "rec_removals") %>%
+recremovals <- metricperformance_all %>% filter(type == "recreational removals") %>% #filter(type == "rec_removals") %>%
   left_join(bagvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(seasvalues, by = c("isim", "year", "RegType", "mp2")) %>%
   left_join(minlenvalues, by = c("isim", "year", "RegType", "mp2"))
@@ -4219,7 +4254,7 @@ baglimit_all <- ggplot(performancemetrics, aes(x = performance, y = bag_value, f
   scale_fill_manual(values = c("Biomass Matrix" = "#1b9e77", "Biological Ref. Point" = "#d95f02",
                                "No Change (RHL as target)" = "#7570b3", "Percent Change Approach" = "#e7298a"))
 baglimit_all
-#ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/goodbad_baglimit_all.png",baglimit_all,width=9,height=7)
+ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/goodbad_baglimit_all_caption.png",baglimit_all,width=9,height=7)
 
 #min size limit 
 minlen_all <- ggplot(performancemetrics, aes(x = performance, y = minlen_value, fill = factor(mp2))) +
@@ -4239,7 +4274,7 @@ minlen_all <- ggplot(performancemetrics, aes(x = performance, y = minlen_value, 
   scale_fill_manual(values = c("Biomass Matrix" = "#1b9e77", "Biological Ref. Point" = "#d95f02",
                                "No Change (RHL as target)" = "#7570b3", "Percent Change Approach" = "#e7298a"))
 minlen_all
-#ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/goodbad_minlen_all.png",minlen_all,width=9,height=7)
+ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/goodbad_minlen_all_caption.png",minlen_all,width=9,height=7)
 
 #season length limit 
 seaslen_all <- ggplot(performancemetrics, aes(x = performance, y = seas_value, fill = factor(mp2))) +
@@ -4259,7 +4294,7 @@ seaslen_all <- ggplot(performancemetrics, aes(x = performance, y = seas_value, f
    scale_fill_manual(values = c("Biomass Matrix" = "#1b9e77", "Biological Ref. Point" = "#d95f02",
                                "No Change (RHL as target)" = "#7570b3", "Percent Change Approach" = "#e7298a"))
 seaslen_all
-#ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/goodbad_seaslen_all.png",seaslen_all,width=9,height=7)
+ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/goodbad_seaslen_all_caption.png",seaslen_all,width=9,height=7)
 
 ######### now each reg change at a time ######### 
 
@@ -4318,15 +4353,29 @@ metricperformance_bag <- diag_ts %>%
     TRUE ~ NA_character_ 
   )) %>% 
   select(isim, year, type, value, RegType, mp2, median, performance) %>%
-  filter(RegType == "Bag")
+  filter(RegType == "Bag") %>%
+  mutate(type = fct_recode(factor(type),
+                          "discards per trip" = "rel per trip",
+                          "spawning biomass" = "spawning biomass",
+                           "number of trips" = "ntrips",
+                           "trophy" = "trophy",
+                           "F/Fref" = "F/Fref",
+                           "B/Bref" = "B/Bref",
+                           "kept per trip" = "kept per trip",
+                           "keep one fish" = "keep_one",
+                           "female harvest" = "prop_female",
+                           "kept-to-released ratio" = "kept:released",
+                           "consumer surplus" = "cs_per_trip",
+                           "recreational removals" = "rec_removals"                   
+                           ))
 
-relpertrip_bag <- metricperformance_bag %>% filter(type == "rel per trip") %>%
+relpertrip_bag <- metricperformance_bag %>% filter(type == "discards per trip") %>% #filter(type == "rel per trip") %>%
   left_join(bagvalues_bag, by = c("isim", "year", "RegType", "mp2"))
               
 spawbio_bag <- metricperformance_bag %>% filter(type == "spawning biomass") %>%
   left_join(bagvalues_bag, by = c("isim", "year", "RegType", "mp2"))
 
-ntrips_bag <- metricperformance_bag %>% filter(type == "ntrips") %>%
+ntrips_bag <- metricperformance_bag %>% filter(type == "number of trips") %>% #filter(type == "ntrips") %>%
   left_join(bagvalues_bag, by = c("isim", "year", "RegType", "mp2"))
 
 trophy_bag <- metricperformance_bag %>% filter(type == "trophy") %>%
@@ -4342,19 +4391,19 @@ notoverfished_bag <- metricperformance_bag %>% filter(type == "B/Bref") %>%
 keptpertrip_bag <- metricperformance_bag %>% filter(type == "kept per trip") %>%
   left_join(bagvalues_bag, by = c("isim", "year", "RegType", "mp2"))
 
-keepone_bag <- metricperformance_bag %>% filter(type == "keep_one") %>%
+keepone_bag <- metricperformance_bag %>% filter(type == "keep one fish") %>% #filter(type == "keep_one") %>%
   left_join(bagvalues_bag, by = c("isim", "year", "RegType", "mp2"))
 
-propfemale_bag <- metricperformance_bag %>% filter(type == "prop_female") %>%
+propfemale_bag <- metricperformance_bag %>% filter(type == "female harvest") %>% #filter(type == "prop_female") %>%
   left_join(bagvalues_bag, by = c("isim", "year", "RegType", "mp2"))
 
-keptreleased_bag <- metricperformance_bag %>% filter(type == "kept:released") %>%
+keptreleased_bag <- metricperformance_bag %>% filter(type == "kept-to-released ratio") %>% #filter(type == "kept:released") %>%
   left_join(bagvalues_bag, by = c("isim", "year", "RegType", "mp2"))
 
-cspertrip_bag <- metricperformance_bag %>% filter(type == "cs_per_trip") %>%
+cspertrip_bag <- metricperformance_bag %>% filter(type == "consumer surplus") %>% #filter(type == "cs_per_trip") %>%
   left_join(bagvalues_bag, by = c("isim", "year", "RegType", "mp2"))
 
-recremovals_bag <- metricperformance_bag %>% filter(type == "rec_removals") %>%
+recremovals_bag <- metricperformance_bag %>% filter(type == "recreational removals") %>% #filter(type == "rec_removals") %>%
   left_join(bagvalues_bag, by = c("isim", "year", "RegType", "mp2"))
 
 #visualize this as series of faceted boxplots 
@@ -4380,7 +4429,7 @@ baglimit_bag <- ggplot(performancemetrics_bag, aes(x = performance, y = bag_valu
   scale_fill_manual(values = c("Biomass Matrix" = "#1b9e77", "Biological Ref. Point" = "#d95f02",
                                "No Change (RHL as target)" = "#7570b3", "Percent Change Approach" = "#e7298a"))
 baglimit_bag
-#ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/goodbad_baglimit_bag.png",baglimit_bag,width=9,height=7)
+ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/goodbad_baglimit_bag_caption.png",baglimit_bag,width=9,height=7)
 
 ####### minlen
 regulationvalues_minlen <- diag_ts %>% 
@@ -4399,7 +4448,7 @@ regulationvalues_minlen <- diag_ts %>%
   filter(year != 2019) %>% 
   filter(type %in% c("bag", "minlen", "seaslen")) %>% 
   filter(RegType == "Length") %>% 
-  select(isim, year, type, value, RegType, mp2)
+  select(isim, year, type, value, RegType, mp2) 
 
 minlenvalues_minlen <- regulationvalues_minlen %>% 
   filter(type == "minlen") %>% 
@@ -4437,15 +4486,29 @@ metricperformance_minlen <- diag_ts %>%
     TRUE ~ NA_character_ 
   )) %>% 
   select(isim, year, type, value, RegType, mp2, median, performance) %>%
-  filter(RegType == "Length")
+  filter(RegType == "Length") %>%
+  mutate(type = fct_recode(factor(type),
+                          "discards per trip" = "rel per trip",
+                          "spawning biomass" = "spawning biomass",
+                           "number of trips" = "ntrips",
+                           "trophy" = "trophy",
+                           "F/Fref" = "F/Fref",
+                           "B/Bref" = "B/Bref",
+                           "kept per trip" = "kept per trip",
+                           "keep one fish" = "keep_one",
+                           "female harvest" = "prop_female",
+                           "kept-to-released ratio" = "kept:released",
+                           "consumer surplus" = "cs_per_trip",
+                           "recreational removals" = "rec_removals"                   
+                           ))
 
-relpertrip_minlen <- metricperformance_minlen %>% filter(type == "rel per trip") %>%
+relpertrip_minlen <- metricperformance_minlen %>% filter(type == "discards per trip") %>% #filter(type == "rel per trip") %>%
   left_join(minlenvalues_minlen, by = c("isim", "year", "RegType", "mp2"))
               
 spawbio_minlen <- metricperformance_minlen %>% filter(type == "spawning biomass") %>%
   left_join(minlenvalues_minlen, by = c("isim", "year", "RegType", "mp2"))
 
-ntrips_minlen <- metricperformance_minlen %>% filter(type == "ntrips") %>%
+ntrips_minlen <- metricperformance_minlen %>% filter(type == "number of trips") %>% #filter(type == "ntrips") %>%
   left_join(minlenvalues_minlen, by = c("isim", "year", "RegType", "mp2"))
 
 trophy_minlen <- metricperformance_minlen %>% filter(type == "trophy") %>%
@@ -4461,19 +4524,19 @@ notoverfished_minlen <- metricperformance_minlen %>% filter(type == "B/Bref") %>
 keptpertrip_minlen <- metricperformance_minlen %>% filter(type == "kept per trip") %>%
   left_join(minlenvalues_minlen, by = c("isim", "year", "RegType", "mp2"))
 
-keepone_minlen <- metricperformance_minlen %>% filter(type == "keep_one") %>%
+keepone_minlen <- metricperformance_minlen %>% filter(type == "keep one fish") %>% #filter(type == "keep_one") %>%
   left_join(minlenvalues_minlen, by = c("isim", "year", "RegType", "mp2"))
 
-propfemale_minlen <- metricperformance_minlen %>% filter(type == "prop_female") %>%
+propfemale_minlen <- metricperformance_minlen %>% filter(type == "female harvest") %>% #filter(type == "prop_female") %>%
   left_join(minlenvalues_minlen, by = c("isim", "year", "RegType", "mp2"))
 
-keptreleased_minlen <- metricperformance_minlen %>% filter(type == "kept:released") %>%
+keptreleased_minlen <- metricperformance_minlen %>% filter(type == "kept-to-released ratio") %>% #filter(type == "kept:released") %>%
   left_join(minlenvalues_minlen, by = c("isim", "year", "RegType", "mp2"))
 
-cspertrip_minlen <- metricperformance_minlen %>% filter(type == "cs_per_trip") %>%
+cspertrip_minlen <- metricperformance_minlen %>% filter(type == "consumer surplus") %>% #filter(type == "cs_per_trip") %>%
   left_join(minlenvalues_minlen, by = c("isim", "year", "RegType", "mp2"))
 
-recremovals_minlen <- metricperformance_minlen %>% filter(type == "rec_removals") %>%
+recremovals_minlen <- metricperformance_minlen %>% filter(type == "recreational removals") %>% #filter(type == "rec_removals") %>%
   left_join(minlenvalues_minlen, by = c("isim", "year", "RegType", "mp2"))
 
 #visualize this as series of faceted boxplots 
@@ -4498,7 +4561,7 @@ minlen_min <- ggplot(performancemetrics_minlen, aes(x = performance, y = minlen_
   scale_fill_manual(values = c("Biomass Matrix" = "#1b9e77", "Biological Ref. Point" = "#d95f02",
                                "No Change (RHL as target)" = "#7570b3", "Percent Change Approach" = "#e7298a"))
 minlen_min
-#ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/goodbad_minlen_min.png",minlen_min,width=9,height=7)
+ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/goodbad_minlen_min_caption.png",minlen_min,width=9,height=7)
 
 ####### seaslen
 regulationvalues_seaslen <- diag_ts %>% 
@@ -4555,15 +4618,29 @@ metricperformance_seaslen <- diag_ts %>%
     TRUE ~ NA_character_ 
   )) %>% 
   select(isim, year, type, value, RegType, mp2, median, performance) %>%
-  filter(RegType == "Season")
+  filter(RegType == "Season") %>%
+  mutate(type = fct_recode(factor(type),
+                          "discards per trip" = "rel per trip",
+                          "spawning biomass" = "spawning biomass",
+                           "number of trips" = "ntrips",
+                           "trophy" = "trophy",
+                           "F/Fref" = "F/Fref",
+                           "B/Bref" = "B/Bref",
+                           "kept per trip" = "kept per trip",
+                           "keep one fish" = "keep_one",
+                           "female harvest" = "prop_female",
+                           "kept-to-released ratio" = "kept:released",
+                           "consumer surplus" = "cs_per_trip",
+                           "recreational removals" = "rec_removals"                   
+                           ))
 
-relpertrip_seaslen <- metricperformance_seaslen %>% filter(type == "rel per trip") %>%
+relpertrip_seaslen <- metricperformance_seaslen %>% filter(type == "discards per trip") %>% #filter(type == "rel per trip") %>%
   left_join(seaslenvalues_seaslen, by = c("isim", "year", "RegType", "mp2"))
               
 spawbio_seaslen <- metricperformance_seaslen %>% filter(type == "spawning biomass") %>%
   left_join(seaslenvalues_seaslen, by = c("isim", "year", "RegType", "mp2"))
 
-ntrips_seaslen <- metricperformance_seaslen %>% filter(type == "ntrips") %>%
+ntrips_seaslen <- metricperformance_seaslen %>% filter(type == "number of trips") %>% #filter(type == "ntrips") %>%
   left_join(seaslenvalues_seaslen, by = c("isim", "year", "RegType", "mp2"))
 
 trophy_seaslen <- metricperformance_seaslen %>% filter(type == "trophy") %>%
@@ -4579,19 +4656,19 @@ notoverfished_seaslen <- metricperformance_seaslen %>% filter(type == "B/Bref") 
 keptpertrip_seaslen <- metricperformance_seaslen %>% filter(type == "kept per trip") %>%
   left_join(seaslenvalues_seaslen, by = c("isim", "year", "RegType", "mp2"))
 
-keepone_seaslen <- metricperformance_seaslen %>% filter(type == "keep_one") %>%
+keepone_seaslen <- metricperformance_seaslen %>% filter(type == "keep one fish") %>% #filter(type == "keep_one") %>%
   left_join(seaslenvalues_seaslen, by = c("isim", "year", "RegType", "mp2"))
 
-propfemale_seaslen <- metricperformance_seaslen %>% filter(type == "prop_female") %>%
+propfemale_seaslen <- metricperformance_seaslen %>% filter(type == "female harvest") %>% #filter(type == "prop_female") %>%
   left_join(seaslenvalues_seaslen, by = c("isim", "year", "RegType", "mp2"))
 
-keptreleased_seaslen <- metricperformance_seaslen %>% filter(type == "kept:released") %>%
+keptreleased_seaslen <- metricperformance_seaslen %>% filter(type == "kept-to-released ratio") %>% #filter(type == "kept:released") %>%
   left_join(seaslenvalues_seaslen, by = c("isim", "year", "RegType", "mp2"))
 
-cspertrip_seaslen <- metricperformance_seaslen %>% filter(type == "cs_per_trip") %>%
+cspertrip_seaslen <- metricperformance_seaslen %>% filter(type == "consumer surplus") %>% #filter(type == "cs_per_trip") %>%
   left_join(seaslenvalues_seaslen, by = c("isim", "year", "RegType", "mp2"))
 
-recremovals_seaslen <- metricperformance_seaslen %>% filter(type == "rec_removals") %>%
+recremovals_seaslen <- metricperformance_seaslen %>% filter(type == "recreational removals") %>% #filter(type == "rec_removals") %>%
   left_join(seaslenvalues_seaslen, by = c("isim", "year", "RegType", "mp2"))
 
 #visualize this as series of faceted boxplots 
@@ -4616,7 +4693,7 @@ seaslen_seas <- ggplot(performancemetrics_seaslen, aes(x = performance, y = seas
   scale_fill_manual(values = c("Biomass Matrix" = "#1b9e77", "Biological Ref. Point" = "#d95f02",
                                "No Change (RHL as target)" = "#7570b3", "Percent Change Approach" = "#e7298a"))
 seaslen_seas
-#ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/goodbad_seaslen_seas.png",seaslen_seas,width=9,height=7)
+ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/goodbad_seaslen_seas_caption.png",seaslen_seas,width=9,height=7)
 
 ```
 
@@ -4950,16 +5027,34 @@ subset_metrics <- c("rel per trip", "spawning biomass", "ntrips", "trophy",
 
 #first do it just as actual values instead of how they scale in relation to 1
 median_metrics_subset <- median_metrics22 %>% 
-  filter(if_any(everything(), ~ .x %in% subset_metrics)) #%>%
+  filter(if_any(everything(), ~ .x %in% subset_metrics)) %>%
   #filter(metric %in% c("kept per trip", "kept:released", "ntrips", "prop_female"))
+    mutate(metric = fct_recode(factor(metric), 
+                           "discards per trip" = "rel per trip",
+                          "spawning biomass" = "spawning biomass",
+                           "number of trips" = "ntrips",
+                           "trophy" = "trophy",
+                           "not overfishing" = "not overfishing",
+                           "not overfished" = "not overfished",
+                           "kept per trip" = "kept per trip",
+                           "keep one fish" = "keep_one",
+                           "female harvest" = "prop_female",
+                           "kept-to-released ratio" = "kept:released",
+                           "consumer surplus" = "cs_per_trip",
+                           "recreational removals" = "rec_removals"           
+                             ))
 
 #if plotting HCR
 levels(as.factor(median_metrics_subset$StartBBMSY))
 levels(as.factor(median_metrics_subset$mp))
 
-median_metrics_subset$metric <- factor(median_metrics_subset$metric, levels = c("rel per trip", "spawning biomass", "ntrips", "trophy",
-                    "not overfishing", "not overfished", "kept per trip",
-                    "keep_one", "prop_female", "kept:released", "cs_per_trip", "rec_removals"))
+median_metrics_subset$metric <- factor(median_metrics_subset$metric, levels = c("discards per trip",
+                          "spawning biomass","number of trips","trophy","not overfishing","not overfished",
+                           "kept per trip","keep one fish","female harvest","kept-to-released ratio",
+                           "consumer surplus","recreational removals"))
+  #factor(median_metrics_subset$metric, levels = c("rel per trip", "spawning biomass", "ntrips", "trophy",
+                    #"not overfishing", "not overfished", "kept per trip",
+                    #"keep_one", "prop_female", "kept:released", "cs_per_trip", "rec_removals")) 
 
 bmsy_hcr <- ggplot(median_metrics_subset, aes(mp, value, col = as.factor(StartBBMSY), 
                                   shape = as.factor(mp), group = StartBBMSY)) + 
@@ -4972,7 +5067,7 @@ bmsy_hcr <- ggplot(median_metrics_subset, aes(mp, value, col = as.factor(StartBB
   scale_shape_manual(values = c("BBM" = 16, "BRP" = 17, "NCA" = 15, "PCA" = 3),
                      labels = c("Biomass Matrix (BBM)", "Biological Ref. Point (BRP)", "No Change Approach (NCA)", "Percent Change Approach (PCA)"))
 bmsy_hcr
-#ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/bmsy_hcr.png",bmsy_hcr,width=9,height=5.5)
+#ggsave("~/Desktop/FlounderMSE/ManuscriptPrep/Draft5Figures_final2/bmsy_hcr_caption.png",bmsy_hcr,width=9,height=5.5)
 
 ###### LINE PLOT W/CI ###### not doing it like this since it makes the plot muddy; would need to edit code above to include CIs again 
 
@@ -5050,8 +5145,22 @@ subset_metrics <- c("rel per trip", "spawning biomass", "ntrips", "trophy",
 
 #first do it just as absolute values instead of how they scale in relation to 1
 median_metrics_subset <- median_metrics22 %>% 
-  filter(if_any(everything(), ~ .x %in% subset_metrics)) #%>%
+  filter(if_any(everything(), ~ .x %in% subset_metrics)) %>%
   #filter(metric %in% c("kept per trip", "kept:released", "ntrips", "prop_female"))
+  mutate(metric = fct_recode(factor(metric), 
+                           "discards per trip" = "rel per trip",
+                          "spawning biomass" = "spawning biomass",
+                           "number of trips" = "ntrips",
+                           "trophy" = "trophy",
+                           "not overfishing" = "not overfishing",
+                           "not overfished" = "not overfished",
+                           "kept per trip" = "kept per trip",
+                           "keep one fish" = "keep_one",
+                           "female harvest" = "prop_female",
+                           "kept-to-released ratio" = "kept:released",
+                           "consumer surplus" = "cs_per_trip",
+                           "recreational removals" = "rec_removals"           
+                             ))
 
 #if plotting reg 
 levels(as.factor(median_metrics_subset$StartBBMSY))
@@ -5059,9 +5168,17 @@ levels(as.factor(median_metrics_subset$RegType))
 
 median_metrics_subset$RegType <- factor(median_metrics_subset$RegType, levels = c("Bag", "Length", "Season", "All"))
 
+median_metrics_subset$metric <- factor(median_metrics_subset$metric, levels = c("discards per trip",
+                          "spawning biomass","number of trips","trophy","not overfishing","not overfished",
+                           "kept per trip","keep one fish","female harvest","kept-to-released ratio",
+                           "consumer surplus","recreational removals"))
+  #factor(median_metrics_subset$metric, levels = c("rel per trip", "spawning biomass", "ntrips", "trophy",
+                    #"not overfishing", "not overfished", "kept per trip",
+                    #"keep_one", "prop_female", "kept:released", "cs_per_trip", "rec_removals")) 
+
 median_metrics_subset$metric <- factor(median_metrics_subset$metric, levels = c("rel per trip", "spawning biomass", "ntrips", "trophy",
                     "not overfishing", "not overfished", "kept per trip",
-                    "keep_one", "prop_female", "kept:released", "cs_per_trip", "rec_removals"))
+                    "keep_one", "prop_female", "kept:released", "cs_per_trip", "rec_removals")) 
 
 bmsy_reg <- ggplot(median_metrics_subset, aes(RegType, value, col = as.factor(StartBBMSY), 
                                   shape = as.factor(RegType), group = StartBBMSY)) + 
